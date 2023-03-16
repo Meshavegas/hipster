@@ -1,0 +1,32 @@
+{
+  "myApp": {
+    "accounts": {
+      "home": {
+        "title": "Accounts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Accounts",
+        "createOrEditLabel": "Create or edit a Accounts",
+        "notFound": "No Accounts found"
+      },
+      "created": "A new Accounts is created with identifier {{ param }}",
+      "updated": "A Accounts is updated with identifier {{ param }}",
+      "deleted": "A Accounts is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Accounts {{ id }}?"
+      },
+      "detail": {
+        "title": "Accounts"
+      },
+      "id": "Id",
+      "accountNumber": "Account Number",
+      "balance": "Balance",
+      "currency": "Currency",
+      "createAt": "Create At",
+      "updateAt": "Update At",
+      "createBy": "Create By",
+      "updateBy": "Update By",
+      "accountingJournal": "Accounting Journal",
+      "userId": "User Id"
+    }
+  }
+}

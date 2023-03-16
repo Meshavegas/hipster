@@ -1,0 +1,32 @@
+{
+  "myApp": {
+    "accounts": {
+      "home": {
+        "title": "Accounts",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Accounts",
+        "createOrEditLabel": "Créer ou éditer un Accounts",
+        "notFound": "Aucun Accounts trouvé"
+      },
+      "created": "Un nouveau Accounts a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Accounts avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Accounts avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Accounts {{ id }} ?"
+      },
+      "detail": {
+        "title": "Accounts"
+      },
+      "id": "Id",
+      "accountNumber": "Account Number",
+      "balance": "Balance",
+      "currency": "Currency",
+      "createAt": "Create At",
+      "updateAt": "Update At",
+      "createBy": "Create By",
+      "updateBy": "Update By",
+      "accountingJournal": "Accounting Journal",
+      "userId": "User Id"
+    }
+  }
+}

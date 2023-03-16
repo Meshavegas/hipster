@@ -1,0 +1,62 @@
+{
+  "applications": "*",
+  "changelogDate": "20230315163630",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "accounts",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "accountNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "balance",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "currency",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createAt",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "updateAt",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "createBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updateBy",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Accounts",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "javadoc": "A relationship",
+      "otherEntityName": "accountingJournal",
+      "otherEntityRelationshipName": "accountId",
+      "relationshipName": "accountingJournal",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "users",
+      "otherEntityRelationshipName": "accounts",
+      "relationshipName": "userId",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

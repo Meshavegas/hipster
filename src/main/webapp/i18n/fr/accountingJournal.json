@@ -1,0 +1,32 @@
+{
+  "myApp": {
+    "accountingJournal": {
+      "home": {
+        "title": "AccountingJournals",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Accounting Journal",
+        "createOrEditLabel": "Créer ou éditer un Accounting Journal",
+        "notFound": "Aucun Accounting Journal trouvé"
+      },
+      "created": "Un nouveau Accounting Journal a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Accounting Journal avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Accounting Journal avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Accounting Journal {{ id }} ?"
+      },
+      "detail": {
+        "title": "Accounting Journal"
+      },
+      "id": "Id",
+      "direction": "Direction",
+      "amount": "Amount",
+      "balanceBefore": "Balance Before",
+      "balanceAfter": "Balance After",
+      "createAt": "Create At",
+      "updateAt": "Update At",
+      "createBy": "Create By",
+      "updateBy": "Update By",
+      "accountId": "Account Id"
+    }
+  }
+}

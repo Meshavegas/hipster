@@ -1,0 +1,71 @@
+
+entity Users {
+	id Long,
+    name String,
+    email String,
+    password String,
+    createAt ZonedDateTime,
+    updateAt ZonedDateTime,
+    createBy String,
+    updateBy String
+
+}
+
+entity Accounts  {
+	id Long,
+    accountNumber String,
+    balance Double,
+    currency String,
+    createAt ZonedDateTime,
+    updateAt ZonedDateTime,
+    createBy String,
+    updateBy String
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity AccountingJournal {
+	id Long,
+	direction Direction,
+    amount Double,
+    balanceBefore Double,
+    balanceAfter Double,
+    createAt ZonedDateTime,
+    updateAt ZonedDateTime,
+    createBy String,
+    updateBy String
+}
+
+enum Direction{
+	CREDIT,DEBIT
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Users to Accounts{userId},
+	/**
+	* A relationship
+	*/
+	Accounts to
+	/**
+	* Another side of the same relationship
+	*/
+	AccountingJournal{accountId}
+}
+
+
+
+
+
+// Set pagination options
+paginate  Accounts with infinite-scroll
+paginate Users, AccountingJournal with pagination
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

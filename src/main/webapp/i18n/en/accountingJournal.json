@@ -1,0 +1,32 @@
+{
+  "myApp": {
+    "accountingJournal": {
+      "home": {
+        "title": "Accounting Journals",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Accounting Journal",
+        "createOrEditLabel": "Create or edit a Accounting Journal",
+        "notFound": "No Accounting Journals found"
+      },
+      "created": "A new Accounting Journal is created with identifier {{ param }}",
+      "updated": "A Accounting Journal is updated with identifier {{ param }}",
+      "deleted": "A Accounting Journal is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Accounting Journal {{ id }}?"
+      },
+      "detail": {
+        "title": "Accounting Journal"
+      },
+      "id": "Id",
+      "direction": "Direction",
+      "amount": "Amount",
+      "balanceBefore": "Balance Before",
+      "balanceAfter": "Balance After",
+      "createAt": "Create At",
+      "updateAt": "Update At",
+      "createBy": "Create By",
+      "updateBy": "Update By",
+      "accountId": "Account Id"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "myApp": {
+    "Direction": {
+      "null": "",
+      "CREDIT": "CREDIT",
+      "DEBIT": "DEBIT"
+    }
+  }
+}

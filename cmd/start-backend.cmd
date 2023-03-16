@@ -1,0 +1,1 @@
+mvn clean verify -DskipTests -P-webapp && java -jar target/my-app-0.0.1-SNAPSHOT.jar
