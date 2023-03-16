@@ -32,6 +32,7 @@ public class Users extends AbstractAuditingEntity<Long> implements Serializable 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull
     @Column(name = "name")
     private String name;
 
@@ -44,12 +45,14 @@ public class Users extends AbstractAuditingEntity<Long> implements Serializable 
     @Column(name = "password")
     private String password;
 
+    @NotNull
     @Column(name = "create_at")
     private ZonedDateTime createAt;
 
     @Column(name = "update_at")
     private ZonedDateTime updateAt;
 
+    @NotNull
     @Column(name = "create_by")
     private String createBy;
 
@@ -81,6 +84,7 @@ public class Users extends AbstractAuditingEntity<Long> implements Serializable 
     @Column(name = "reset_date")
     private Instant resetDate = null;
 
+    @NotNull
     @OneToMany(mappedBy = "userId")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @JsonIgnoreProperties(value = { "accountingJournals", "userId" }, allowSetters = true)

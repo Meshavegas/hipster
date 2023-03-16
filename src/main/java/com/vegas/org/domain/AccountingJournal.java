@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serializable;
 import java.time.ZonedDateTime;
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -54,6 +55,7 @@ public class AccountingJournal implements Serializable {
     /**
      * Another side of the same relationship
      */
+    @NotNull
     @Schema(description = "Another side of the same relationship")
     @ManyToOne
     @JsonIgnoreProperties(value = { "accountingJournals", "userId" }, allowSetters = true)
@@ -191,7 +193,8 @@ public class AccountingJournal implements Serializable {
         return this;
     }
 
-    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
+    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and
+    // setters here
 
     @Override
     public boolean equals(Object o) {
@@ -206,7 +209,8 @@ public class AccountingJournal implements Serializable {
 
     @Override
     public int hashCode() {
-        // see https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/
+        // see
+        // https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/
         return getClass().hashCode();
     }
 
@@ -214,15 +218,15 @@ public class AccountingJournal implements Serializable {
     @Override
     public String toString() {
         return "AccountingJournal{" +
-            "id=" + getId() +
-            ", direction='" + getDirection() + "'" +
-            ", amount=" + getAmount() +
-            ", balanceBefore=" + getBalanceBefore() +
-            ", balanceAfter=" + getBalanceAfter() +
-            ", createAt='" + getCreateAt() + "'" +
-            ", updateAt='" + getUpdateAt() + "'" +
-            ", createBy='" + getCreateBy() + "'" +
-            ", updateBy='" + getUpdateBy() + "'" +
-            "}";
+                "id=" + getId() +
+                ", direction='" + getDirection() + "'" +
+                ", amount=" + getAmount() +
+                ", balanceBefore=" + getBalanceBefore() +
+                ", balanceAfter=" + getBalanceAfter() +
+                ", createAt='" + getCreateAt() + "'" +
+                ", updateAt='" + getUpdateAt() + "'" +
+                ", createBy='" + getCreateBy() + "'" +
+                ", updateBy='" + getUpdateBy() + "'" +
+                "}";
     }
 }

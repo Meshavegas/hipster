@@ -7,6 +7,7 @@ import java.time.ZonedDateTime;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -26,6 +27,7 @@ public class Accounts implements Serializable {
     @Column(name = "id")
     private Long id;
 
+    @NotNull
     @Column(name = "account_number")
     private String accountNumber;
 
@@ -50,12 +52,14 @@ public class Accounts implements Serializable {
     /**
      * A relationship
      */
+    @NotNull
     @Schema(description = "A relationship")
     @OneToMany(mappedBy = "accountId")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @JsonIgnoreProperties(value = { "accountId" }, allowSetters = true)
     private Set<AccountingJournal> accountingJournals = new HashSet<>();
 
+    @NotNull
     @ManyToOne
     @JsonIgnoreProperties(value = { "accounts" }, allowSetters = true)
     private Users userId;
@@ -210,7 +214,8 @@ public class Accounts implements Serializable {
         return this;
     }
 
-    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
+    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and
+    // setters here
 
     @Override
     public boolean equals(Object o) {
@@ -225,7 +230,8 @@ public class Accounts implements Serializable {
 
     @Override
     public int hashCode() {
-        // see https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/
+        // see
+        // https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/
         return getClass().hashCode();
     }
 
@@ -233,14 +239,14 @@ public class Accounts implements Serializable {
     @Override
     public String toString() {
         return "Accounts{" +
-            "id=" + getId() +
-            ", accountNumber='" + getAccountNumber() + "'" +
-            ", balance=" + getBalance() +
-            ", currency='" + getCurrency() + "'" +
-            ", createAt='" + getCreateAt() + "'" +
-            ", updateAt='" + getUpdateAt() + "'" +
-            ", createBy='" + getCreateBy() + "'" +
-            ", updateBy='" + getUpdateBy() + "'" +
-            "}";
+                "id=" + getId() +
+                ", accountNumber='" + getAccountNumber() + "'" +
+                ", balance=" + getBalance() +
+                ", currency='" + getCurrency() + "'" +
+                ", createAt='" + getCreateAt() + "'" +
+                ", updateAt='" + getUpdateAt() + "'" +
+                ", createBy='" + getCreateBy() + "'" +
+                ", updateBy='" + getUpdateBy() + "'" +
+                "}";
     }
 }

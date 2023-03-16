@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.vegas.org.config.Constants;
 import java.io.Serializable;
 import java.time.Instant;
-import java.time.ZonedDateTime;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
@@ -44,14 +43,17 @@ public class User extends AbstractAuditingEntity<Long> implements Serializable {
     @Column(name = "password_hash", length = 60, nullable = false)
     private String password;
 
+    @NotNull
     @Size(max = 50)
     @Column(name = "first_name", length = 50)
     private String firstName;
 
+    @NotNull
     @Size(max = 50)
     @Column(name = "last_name", length = 50)
     private String lastName;
 
+    @NotNull
     @Email
     @Size(min = 5, max = 254)
     @Column(length = 254, unique = true)
@@ -82,18 +84,7 @@ public class User extends AbstractAuditingEntity<Long> implements Serializable {
     @Column(name = "reset_date")
     private Instant resetDate = null;
 
-    @Column(name = "create_at")
-    private ZonedDateTime createAt;
-
-    @Column(name = "update_at")
-    private ZonedDateTime updateAt;
-
-    @Column(name = "create_by")
-    private String createBy;
-
-    @Column(name = "update_by")
-    private String updateBy;
-
+    @NotNull
     @JsonIgnore
     @ManyToMany
     @JoinTable(
